@@ -1,4 +1,4 @@
-package com.bajaj.bajajtask;
+package com.bajaj.bajaj_task;
 
 public class WebhookResponse {
     private String webhook;
