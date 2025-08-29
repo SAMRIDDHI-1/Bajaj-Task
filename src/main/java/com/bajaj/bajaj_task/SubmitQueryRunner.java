@@ -21,19 +21,15 @@ public class SubmitQueryRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // 👉 NOTE:
-        // Ye values abhi manually daal raha ho
-        // tu GenerateWebhookRunner se copy karke paste kar de
-        String webhookUrl = "PASTE_YOUR_WEBHOOK_HERE";
-        String accessToken = "PASTE_YOUR_TOKEN_HERE";
+     
+        String webhookUrl = "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA ";
+        String accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJyZWdObyI6IjIyQkNZMTAwNDEiLCJuYW1lIjoiU2FtcmlkZGhpIFRyaXBhdGhpIiwiZW1haWwiOiJzYW1yaWRkaGl0cmlwYXRoaTIwMjJAdml0YmhvcGFsLmFjLmluIiwic3ViIjoid2ViaG9vay11c2VyIiwiaWF0IjoxNzU2NDQ5NDQ3LCJleHAiOjE3NTY0NTAzNDd9.-qmLLgYZxEqyvQenCJPNd246kUe_7VxYR30fZ4JjoYo";
 
-        // Ab yahan apna SQL query daal (jo question ke hisaab se solve karni hai)
        String sqlQuery = "SELECT column1, column2 FROM your_table WHERE condition1 = 'value' ORDER BY column1;";
-// 👈 apni query daalni hai
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setBearerAuth(accessToken); // JWT token lag gaya
+        headers.setBearerAuth(accessToken); 
 
         Map<String, String> body = new HashMap<>();
         body.put("finalQuery", sqlQuery);

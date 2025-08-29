@@ -24,9 +24,9 @@ public class GenerateWebhookRunner implements CommandLineRunner {
         String url = "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA";
 
         Map<String, String> body = new HashMap<>();
-        body.put("name", "John Doe");   // 👈 yahan apna naam daal
-        body.put("regNo", "REG12347");  // 👈 yahan apna reg no
-        body.put("email", "john@example.com"); // 👈 apna email
+        body.put("name", "Samriddhi Tripathi");   
+        body.put("regNo", "22BCY10041");  
+        body.put("email", "samriddhitripathi2022@vitbhopal.ac.in");  
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
